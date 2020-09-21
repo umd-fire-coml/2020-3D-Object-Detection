@@ -131,3 +131,6 @@ dmypy.json
 # Dataset
 /data/
 !/data/.gitkeep
+
+# Data checker output
+/code/data-checker--file-output.txt
