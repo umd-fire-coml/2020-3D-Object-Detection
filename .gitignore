@@ -132,6 +132,10 @@ dmypy.json
 /data/
 !/data/.gitkeep
 
+
 # DS_Store and Thumbs.db
 **/.DS_Store
 **/Thumbs.db
+
+# Data checker output
+/code/data-checker--file-output.txt
