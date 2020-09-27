@@ -14,7 +14,7 @@ def check_dir(text_file_name):
     return invalid_num
 
 
-if check_dir('data-checker--file-output-MASTER.txt') > 0:
+if check_dir('code/data-checker--file-output-MASTER.txt') > 0:
     print("***********************************************************")
     print("Data not valid")
 else:
