@@ -1,39 +1,22 @@
 import os
 
-def check_dir(file_path):
+def check_dir(text_file_name):
     invalid_num = 0
  
-    # loop through files in file_path
-    for files in os.listdir(file_path):
-        if files == '.DS_Store' or files == '.gitkeep':
-            print("Ignored: ", os.path.join(file_path, files))
-        elif files.endswith(".zip"):
-            invalid_num += 1
-            print("Make sure data is unzipped: ", os.path.join(file_path, files))
-        else:
-            for dirname in os.listdir(os.path.join(file_path, files)):
-                if dirname == 'calib' or dirname == 'label_2' or dirname == 'image_3' or dirname == 'image_2':
-                    for filename in os.listdir(os.path.join(file_path, files, dirname)):
-                        if dirname == 'calib' or dirname == 'label_2':
-                            if filename == '.DS_Store':
-                                print("Ignored: ", os.path.join(file_path, files, dirname, filename))
-                            elif filename.endswith(".txt") != True:
-                                invalid_num += 1
-                                print("File does not match proper structure: ", os.path.join(file_path, files, dirname, filename))
-                        elif dirname == 'image_3' or dirname == 'image_2':
-                            if filename == '.DS_Store':
-                                print("Ignored: ", os.path.join(file_path, files, dirname, filename))
-                            elif filename.endswith(".png") != True:
-                                invalid_num += 1
-                                print("File does not match proper structure: ", os.path.join(file_path, files, dirname, filename))
+    # loop through each line in file
+    with open(text_file_name, "r") as a_file:
+        for line in a_file:
+            stripped_line = line.strip()
+            if not os.path.isfile(stripped_line):
+                invalid_num += 1
+                print("This file does not exist: ", stripped_line)
 
     return invalid_num
 
 
-if check_dir('data') > 0:
+if check_dir('code/data-checker--file-output-MASTER.txt') > 0:
     print("***********************************************************")
     print("Data not valid")
 else:
     print("***********************************************************")
     print("Data is valid")
-
