@@ -7,7 +7,7 @@ filename= 'data-checker--file-output.txt'
 
 for root, dirs, files in os.walk('data', topdown=True):
     for i in files:
-      filepaths.append(os.path.join(root, i))
+      filepaths.append(os.path.join(root, i).replace("\\","/"))
 
 with open(os.path.join('code', filename), 'w', encoding= 'utf8') as file:
     for i in filepaths:
