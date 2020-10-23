@@ -9,10 +9,8 @@ Use pip install [package name]
 
 ## And if you want to demo in a jupyter notebook do this
 
-instructions taken from https://github.com/kuixu/kitti_object_vis/tree/master/jupyter
 
-
-## - install ipywidgets and ipyevents, enable them as notebook extensions
+### - install ipywidgets and ipyevents, enable them as notebook extensions
 
 $ pip install ipywidgets ipyevents
 
@@ -20,14 +18,16 @@ $ jupyter nbextension enable --py widgetsnbextension
 
 $ jupyter nbextension enable --py --sys-prefix ipyevents
 
-## - install and enable mayavi extension
+### - install and enable mayavi extension
 
 $ jupyter nbextension install --py mayavi --user
 
 $ jupyter nbextension enable --py mayavi --user
 
-## - To test on Jupyter notebook, first set ETS_TOOLKIT
+### - To test on Jupyter notebook, first set ETS_TOOLKIT
 
 $ export ETS_TOOLKIT='null'
 
 **All this is assuming you have jupyter notebook already installed
+
+instructions taken from https://github.com/kuixu/kitti_object_vis/tree/master/jupyter
