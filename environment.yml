@@ -1,0 +1,8 @@
+name: 3D-object-detection
+dependencies:
+  - python=3.7
+  - jupyterlab
+  - opencv
+  - matplotlib
+  - pillow
+  - scipy
