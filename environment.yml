@@ -6,3 +6,7 @@ dependencies:
   - matplotlib
   - pillow
   - scipy
+  - pandas
+  - sklearn
+  - keras
+  - tensorflow
