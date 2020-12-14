@@ -60,3 +60,10 @@ https://www.youtube.com/watch?v=9qhR76ZDG2c&feature=youtu.be
   year={2020},
   volume={abs/2006.11275}
 }
+
+@article{zhou2018voxelnet,
+   title={VoxelNet: End-to-End Learning for Point Cloud Based 3D Object Detection},
+   journal={CVPR},
+   author={Zhou, Yin and Tuzel, Oncel},
+   year={2018},
+}
