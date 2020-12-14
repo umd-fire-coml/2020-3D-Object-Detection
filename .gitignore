@@ -138,5 +138,5 @@ dmypy.json
 **/Thumbs.db
 
 # Data checker output
-/code/data-checker--file-output.txt
+/checker/data-checker--file-output.txt
 
